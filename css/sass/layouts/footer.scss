@@ -1,0 +1,44 @@
+.Footer {
+    position: relative;
+    background-color: #353535;
+    color: $White;
+    padding: .5rem 1.5rem 1.5rem 1.5rem;
+
+    & h2 {
+        font-family: "Shrikhand", cursive;
+        font-size: 18px;
+        font-weight: $Footer-FontWeight;
+    }
+
+    & div {
+        margin-bottom: 1vh;
+    }
+
+    & a {
+        text-decoration: none;
+        color: $White;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: $Footer-FontWeight;
+    }
+
+    .fa-utensils {
+        font-size: 18px;
+        margin-right: 1rem;
+    }
+
+    .fa-hands-helping {
+        font-size: 19px;
+        margin-right: .75rem;
+    }
+
+    &-Link {
+        &:hover {
+            border-bottom: 1px solid $Secondary;
+        }
+
+        &:active {
+            color: $Tertiary;
+        }
+    }
+}

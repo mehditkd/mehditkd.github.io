@@ -1,0 +1,41 @@
+.Functioning{
+    width: 90%;
+    max-width: 400px;
+    margin: 3.5rem auto;
+    & h2{
+        font-size: 22px;
+    }
+}
+
+.Functioning_Instruction{
+    display: flex;
+    align-items: center;
+    background-color: $Background;
+    box-shadow: 0 3px 3px 0 $Background-Darken;
+    border-radius: 1rem;
+    margin: 1rem 0 2.5rem .5rem;
+    & div{
+        background-color: $Primary;
+        padding: .25rem .5rem;
+        border-radius: 50%;
+        margin-left: -.75rem;
+        color: white;
+        font-size: 30px;
+        margin-right: $Functioning-MarginRight;
+    }
+    & i{
+        font-size: 18px;
+        margin-right: $Functioning-MarginRight;
+    }
+    & p{
+        font-size: 18px;
+        font-weight: 300;
+    }
+    .fas-color{
+        color: $Primary;
+    }
+}
+
+.Functioning_Instruction-Color{
+    background-color: #f5e2ffce;
+}

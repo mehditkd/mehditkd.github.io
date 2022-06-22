@@ -1,0 +1,141 @@
+.Restaurant_Banner{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    & img{
+        width: $Width;
+        max-height: 300px;
+        object-fit: cover;
+    }
+}
+
+.Restaurant_Container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 1024px;
+    margin-top: -2.5rem;
+    width: 100%;
+    background-color: $Background;
+    padding: 1.5rem 0;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.Restaurant_Title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & h2{
+        font-family: "Shrikhand" , cursive;
+        font-size: 27px;
+        margin: 0 1rem;
+    }
+    & i{
+        position: absolute;
+        right: 15px;
+        top: 25px;
+        font-size: 30px;
+    }
+}
+
+.Restaurant_Menu{
+    background-color: $Background;
+    & h3{
+        padding-top: .5rem;
+        margin-left: 1rem;
+        font-size: 16px;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+    &-Border{
+        padding-bottom: 0.25rem;
+        border-bottom: 3px solid $Tertiary;
+    }
+    &-Anim01{
+        animation: SlideMenu 600ms ease-in 300ms both;
+    }
+    &-Anim02{
+        animation: SlideMenu 600ms ease-in 450ms both;
+    }
+    &-Anim03{
+        animation: SlideMenu 600ms ease-in 600ms both;
+    }
+    &-Anim04{
+        animation: SlideMenu 600ms ease-in 750ms both;
+    }
+    &-Background{
+        background-color: $White;
+        box-shadow: 0 1px 1px 1px black;
+        border-radius: 1rem;
+        margin: 1rem .5rem;
+        cursor: pointer;    
+        .Restaurant_Menu_NamePrice{
+            display: flex;
+            justify-content: space-between;
+        }
+        .Restaurant_Menu_Name{
+            padding: 0 1rem;
+            @include Ellipsis;
+            & h4{
+                font-size: 15px;
+                @include Ellipsis;
+            }
+            & p{
+                font-size: 13px;
+                font-weight: 300;
+                margin-top: -.5rem;
+                @include Ellipsis;
+            }
+        }
+        .Restaurant_Menu_Price{
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            padding: 0 1rem;
+            transition: 600ms ease-in-out;
+        }
+        &:hover .Restaurant_Menu_Choose{
+            transform-origin: right;
+            animation: ScaleX 600ms ease-in-out both;
+            & i{
+                animation: Rotate360 600ms ease-in-out both; 
+            }
+        }
+        &:hover .Restaurant_Menu_Price{
+            padding-right: 75px;
+            transition: 600ms ease-in-out;
+        }
+    }
+}
+
+.Restaurant_Menu_Choose{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $Tertiary;
+    height: 100%;
+    width: 65px;
+    border-radius: 0 1rem 1rem 0;
+    position: absolute;
+    top: 0;
+    bottom: -0.5px;
+    right: -0.5px;
+    animation: ScaleX-Back 600ms ease-in-out both;
+    transform-origin: right;
+    & i{
+        font-size: 30px;
+        color: $White;
+        animation: Rotate360-Back 600ms ease-in-out both;
+    }
+}
+
+.Restaurant_Order{
+    display: flex;
+    justify-content: center;
+    margin: 3.5rem 0 1.25rem 0;
+
+}
+
+.Restaurant_Order_Button{
+    padding: .75rem 3.5rem;
+}

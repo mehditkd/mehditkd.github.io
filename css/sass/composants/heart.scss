@@ -1,0 +1,25 @@
+.Restaurant_heart {
+    .fas {
+        background: $LinearGradient-Inverse;
+        -webkit-background-clip: text;
+        color: transparent;
+        transform: scale(0);
+        transform-origin: bottom;
+        cursor: $Cursor;
+    }
+
+    .far {
+        cursor: $Cursor;
+    }
+
+    &:hover .far {
+        background: $LinearGradient-Inverse;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    &:hover .fas {
+        transform: scale(1);
+        transition: 600ms ease-in;
+    }
+}

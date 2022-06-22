@@ -1,0 +1,24 @@
+@mixin HeaderTitle {
+    font-size: $Header-FontSize;
+    text-align: $Header-Center;
+    margin: $Header-Margin;
+}
+
+@mixin BoxShadow {
+    box-shadow: 0 3px 3px 3px black;
+}
+
+@mixin BoxShadow-Big {
+    box-shadow: 0 6px 6px 6px black;
+}
+
+@mixin Scaling {
+    transform: scale(1.02);
+    transition: 150ms ease-in-out;
+}
+
+@mixin Ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
